@@ -10,7 +10,7 @@ import com.endercrest.uwaterlooapi.courses.Courses;
 public class UWaterlooAPI {
 
     private final Courses courses;
-    
+
     public UWaterlooAPI(String api){
         courses = new Courses(api);
     }

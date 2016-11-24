@@ -4,8 +4,10 @@ import com.google.gson.annotations.SerializedName;
 
 /**
  * Created by Thomas Cordua-von Specht on 11/23/2016.
+ *
+ * Base information of all courses.
  */
-public class CourseMinimal {
+public class CourseBase {
 
     @SerializedName("course_id")
     private String courseId;

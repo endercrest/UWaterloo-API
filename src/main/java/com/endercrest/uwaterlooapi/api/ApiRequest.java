@@ -49,11 +49,30 @@ public class ApiRequest<T> {
      * @return A Parsed ApiRequest with the type structure given above.
      */
     public static <Z> ApiRequest<Z> createApiRequest(String endpoint, String apiKey, Type apiRequestType) {
+        return createApiRequest(endpoint, apiKey, "", apiRequestType);
+    }
+
+    /**
+     * Creates a new API Request with the requested endpoint using the apiKey, which then uses
+     * the apiRequestType to construct the object correctly with parameters.
+     *
+     * Examples:
+     * createApiRequest("courses", "123456", new TypeToken<ApiRequest<List<CourseMinimal>>>() {}.getType())
+     *
+     * @param endpoint The endpoint of the university v2 api.
+     * @param apiKey Your apiKey given by the university of waterloo.
+     * @param params Any extra parameters that the path might accept.
+     * @param apiRequestType references the structure of the ApiRequest. IE {@link TypeToken}
+     * @param <Z> The model of the data.
+     * @return A Parsed ApiRequest with the type structure given above.
+     */
+    public static <Z> ApiRequest<Z> createApiRequest(String endpoint, String apiKey, String params, Type apiRequestType){
         Gson gson = new GsonBuilder().create();
 
         String json = "";
         try {
-            URLDownload download = new URLDownload(new URL(String.format("https://api.uwaterloo.ca/v2/%s.json?key=%s", endpoint, apiKey)));
+            URL url = new URL(String.format("https://api.uwaterloo.ca/v2/%s.json?key=%s%s", endpoint, apiKey, params.equals("") ? "": "&"+params));
+            URLDownload download = new URLDownload(url);
             json = download.downloadContents();
         } catch (MalformedURLException e) {
             e.printStackTrace();
