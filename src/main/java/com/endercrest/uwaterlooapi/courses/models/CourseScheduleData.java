@@ -5,25 +5,25 @@ import java.util.List;
 /**
  * Created by Thomas Cordua-von Specht on 11/24/2016.
  */
-public class Schedule {
+public class CourseScheduleData {
 
-    private Dates dates;
-    private Location location;
+    private CourseDates dates;
+    private CourseLocation location;
     private List<String> instructors;
 
-    public Dates getDates() {
+    public CourseDates getDates() {
         return dates;
     }
 
-    public void setDates(Dates dates) {
+    public void setDates(CourseDates dates) {
         this.dates = dates;
     }
 
-    public Location getLocation() {
+    public CourseLocation getLocation() {
         return location;
     }
 
-    public void setLocation(Location location) {
+    public void setLocation(CourseLocation location) {
         this.location = location;
     }
 

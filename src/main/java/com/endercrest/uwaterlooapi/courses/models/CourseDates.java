@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 /**
  * Created by Thomas Cordua-von Specht on 11/24/2016.
  */
-public class Dates {
+public class CourseDates {
 
     @SerializedName("start_time")
     private String startTime;

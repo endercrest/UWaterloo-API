@@ -34,9 +34,9 @@ public class CourseSchedule {
     @SerializedName("waiting_total")
     private int waitingTotal;
     private String total;
-    private List<Reserves> reserves;
+    private List<CourseReserves> reserves;
     @SerializedName("classes")
-    private List<Schedule> schedules;
+    private List<CourseScheduleData> schedules;
     @SerializedName("held_with")
     private List<String> heldWith;
     private int term;
@@ -173,19 +173,19 @@ public class CourseSchedule {
         this.total = total;
     }
 
-    public List<Reserves> getReserves() {
+    public List<CourseReserves> getReserves() {
         return reserves;
     }
 
-    public void setReserves(List<Reserves> reserves) {
+    public void setReserves(List<CourseReserves> reserves) {
         this.reserves = reserves;
     }
 
-    public List<Schedule> getSchedules() {
+    public List<CourseScheduleData> getSchedules() {
         return schedules;
     }
 
-    public void setSchedules(List<Schedule> schedules) {
+    public void setSchedules(List<CourseScheduleData> schedules) {
         this.schedules = schedules;
     }
 

@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 /**
  * Created by Thomas Cordua-von Specht on 11/24/2016.
  */
-public class Reserves {
+public class CourseReserves {
 
     @SerializedName("reserve_group")
     private String reserveGroup;

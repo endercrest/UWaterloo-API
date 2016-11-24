@@ -3,7 +3,7 @@ package com.endercrest.uwaterlooapi.courses.models;
 /**
  * Created by Thomas Cordua-von Specht on 11/24/2016.
  */
-public class Location {
+public class CourseLocation {
 
     private String building;
     private String room;

@@ -18,7 +18,7 @@ public class CourseFull extends Course {
     @SerializedName("terms_offered")
     private List<String> termsOffered;
     private String notes;
-    private Offerings offerings;
+    private CourseOfferings offerings;
     @SerializedName("needs_department_consent")
     private Boolean needsDepartmentConsent;
     @SerializedName("needs_instructor_consent")
@@ -76,11 +76,11 @@ public class CourseFull extends Course {
         this.notes = notes;
     }
 
-    public Offerings getOfferings() {
+    public CourseOfferings getOfferings() {
         return offerings;
     }
 
-    public void setOfferings(Offerings offerings) {
+    public void setOfferings(CourseOfferings offerings) {
         this.offerings = offerings;
     }
 
