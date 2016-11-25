@@ -96,7 +96,7 @@ public class Courses {
      */
     public ApiRequest<List<CourseSchedule>> getCourseScheduleBySubjectCatalog(String subject, String catalogNumber){
         return ApiRequest.createApiRequest(String.format(COURSE_SUBJECT_CATALOG_SCHEDULE_ENDPOINT, subject, catalogNumber), api,
-                new TypeToken<ApiRequest<List<CourseSchedule>>>(){}.getType())
+                new TypeToken<ApiRequest<List<CourseSchedule>>>(){}.getType());
     }
 
     /**
@@ -108,7 +108,7 @@ public class Courses {
      */
     public ApiRequest<List<CourseSchedule>> getCourseScheduleBySubjectCatalog(String subject, String catalogNumber, String term){
         return ApiRequest.createApiRequest(String.format(COURSE_SUBJECT_CATALOG_SCHEDULE_ENDPOINT, subject, catalogNumber), api, "term="+term,
-                new TypeToken<ApiRequest<List<CourseSchedule>>>(){}.getType())
+                new TypeToken<ApiRequest<List<CourseSchedule>>>(){}.getType());
     }
 
     /**
