@@ -220,4 +220,175 @@ public class CourseSchedule {
     public void setLastUpdated(String lastUpdated) {
         this.lastUpdated = lastUpdated;
     }
+
+    public class CourseReserves {
+
+        @SerializedName("reserve_group")
+        private String reserveGroup;
+        @SerializedName("enrollment_capacity")
+        private int enrollmentCapacity;
+        @SerializedName("enrollment_total")
+        private int enrollmentTotal;
+
+        public String getReserveGroup() {
+            return reserveGroup;
+        }
+
+        public void setReserveGroup(String reserveGroup) {
+            this.reserveGroup = reserveGroup;
+        }
+
+        public int getEnrollmentCapacity() {
+            return enrollmentCapacity;
+        }
+
+        public void setEnrollmentCapacity(int enrollmentCapacity) {
+            this.enrollmentCapacity = enrollmentCapacity;
+        }
+
+        public int getEnrollmentTotal() {
+            return enrollmentTotal;
+        }
+
+        public void setEnrollmentTotal(int enrollmentTotal) {
+            this.enrollmentTotal = enrollmentTotal;
+        }
+    }
+
+    public class CourseScheduleData {
+
+        private CourseDates dates;
+        private CourseLocation location;
+        private List<String> instructors;
+
+        public CourseDates getDates() {
+            return dates;
+        }
+
+        public void setDates(CourseDates dates) {
+            this.dates = dates;
+        }
+
+        public CourseLocation getLocation() {
+            return location;
+        }
+
+        public void setLocation(CourseLocation location) {
+            this.location = location;
+        }
+
+        public List<String> getInstructors() {
+            return instructors;
+        }
+
+        public void setInstructors(List<String> instructors) {
+            this.instructors = instructors;
+        }
+
+        public class CourseLocation {
+
+            private String building;
+            private String room;
+
+            public String getBuilding() {
+                return building;
+            }
+
+            public void setBuilding(String building) {
+                this.building = building;
+            }
+
+            public String getRoom() {
+                return room;
+            }
+
+            public void setRoom(String room) {
+                this.room = room;
+            }
+        }
+
+        public class CourseDates {
+
+            @SerializedName("start_time")
+            private String startTime;
+            @SerializedName("end_time")
+            private String endTime;
+            private String weekdays;
+            @SerializedName("start_date")
+            private String startDate;
+            @SerializedName("end_date")
+            private String endDate;
+            @SerializedName("is_tba")
+            private Boolean isTba;
+            @SerializedName("is_cancelled")
+            private Boolean isCancelled;
+            @SerializedName("is_closed")
+            private Boolean isClosed;
+
+            public String getStartTime() {
+                return startTime;
+            }
+
+            public void setStartTime(String startTime) {
+                this.startTime = startTime;
+            }
+
+            public String getEndTime() {
+                return endTime;
+            }
+
+            public void setEndTime(String endTime) {
+                this.endTime = endTime;
+            }
+
+            public String getWeekdays() {
+                return weekdays;
+            }
+
+            public void setWeekdays(String weekdays) {
+                this.weekdays = weekdays;
+            }
+
+            public String getStartDate() {
+                return startDate;
+            }
+
+            public void setStartDate(String startDate) {
+                this.startDate = startDate;
+            }
+
+            public String getEndDate() {
+                return endDate;
+            }
+
+            public void setEndDate(String endDate) {
+                this.endDate = endDate;
+            }
+
+            public Boolean getTba() {
+                return isTba;
+            }
+
+            public void setTba(Boolean tba) {
+                isTba = tba;
+            }
+
+            public Boolean getCancelled() {
+                return isCancelled;
+            }
+
+            public void setCancelled(Boolean cancelled) {
+                isCancelled = cancelled;
+            }
+
+            public Boolean getClosed() {
+                return isClosed;
+            }
+
+            public void setClosed(Boolean closed) {
+                isClosed = closed;
+            }
+        }
+
+    }
 }
