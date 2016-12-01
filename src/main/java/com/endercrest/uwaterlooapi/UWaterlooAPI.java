@@ -1,6 +1,7 @@
 package com.endercrest.uwaterlooapi;
 
 import com.endercrest.uwaterlooapi.awards.AwardsAPI;
+import com.endercrest.uwaterlooapi.blogs.BlogsAPI;
 import com.endercrest.uwaterlooapi.courses.CoursesAPI;
 import com.endercrest.uwaterlooapi.events.EventsAPI;
 import com.endercrest.uwaterlooapi.feds.FedsAPI;
@@ -16,15 +17,17 @@ public class UWaterlooAPI {
     private final CoursesAPI coursesAPI;
     private final FedsAPI fedsAPI;
     private final FoodServicesAPI foodServicesAPI;
-    private final AwardsAPI awards;
+    private final AwardsAPI awardsAPI;
     private final EventsAPI eventsAPI;
+    private final BlogsAPI blogsAPI;
 
     public UWaterlooAPI(String apiKey){
         coursesAPI = new CoursesAPI(apiKey);
         fedsAPI = new FedsAPI(apiKey);
         foodServicesAPI = new FoodServicesAPI(apiKey);
-        awards = new AwardsAPI(apiKey);
+        awardsAPI = new AwardsAPI(apiKey);
         eventsAPI = new EventsAPI(apiKey);
+        blogsAPI = new BlogsAPI(apiKey);
     }
 
     /**
@@ -56,7 +59,7 @@ public class UWaterlooAPI {
      * @return {@link AwardsAPI}
      */
     public AwardsAPI getAwards(){
-        return awards;
+        return awardsAPI;
     }
 
     /**
@@ -65,5 +68,13 @@ public class UWaterlooAPI {
      */
     public EventsAPI getEventsAPI(){
         return eventsAPI;
+    }
+
+    /**
+     * Get the class that contains all API methods for the blogsAPI
+     * @return {@link BlogsAPI}
+     */
+    public BlogsAPI getBlogsAPI(){
+        return blogsAPI;
     }
 }
