@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class Feds {
 
-    private String api;
+    private final String api;
 
     private static final String FEDS_EVENTS_ENDPOINT = "feds/events";
     private static final String FEDS_EVENT_ENDPOINT= "feds/events/%s";

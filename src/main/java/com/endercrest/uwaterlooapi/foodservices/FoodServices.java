@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class FoodServices {
 
-    private String api;
+    private final String api;
 
     private static final String MENU_ENDPOINT = "foodservices/menu";
     private static final String NOTES_ENDPOINT = "foodservices/notes";

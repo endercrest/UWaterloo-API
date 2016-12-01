@@ -1,5 +1,6 @@
 package com.endercrest.uwaterlooapi;
 
+import com.endercrest.uwaterlooapi.awards.Awards;
 import com.endercrest.uwaterlooapi.courses.Courses;
 import com.endercrest.uwaterlooapi.feds.Feds;
 import com.endercrest.uwaterlooapi.foodservices.FoodServices;
@@ -14,11 +15,13 @@ public class UWaterlooAPI {
     private final Courses courses;
     private final Feds feds;
     private final FoodServices foodServices;
+    private final Awards awards;
 
     public UWaterlooAPI(String api){
         courses = new Courses(api);
         feds = new Feds(api);
         foodServices = new FoodServices(api);
+        awards = new Awards(api);
     }
 
     /**
@@ -43,5 +46,14 @@ public class UWaterlooAPI {
      */
     public FoodServices getFoodServices(){
         return foodServices;
+    }
+
+
+    /**
+     * Get the class that contains all API methods for the awards
+     * @return {@link Awards}
+     */
+    public Awards getAwards(){
+        return awards;
     }
 }
