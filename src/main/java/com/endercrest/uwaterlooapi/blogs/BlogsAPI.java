@@ -12,8 +12,8 @@ import java.util.List;
  */
 public class BlogsAPI {
 
-    private static final String SITE_ENDPOINT = "/blogs/%s";
-    private static final String SITE_ID_ENDPOINT = "/blogs/%s/%s";
+    private static final String SITE_ENDPOINT = "blogs/%s";
+    private static final String SITE_ID_ENDPOINT = "blogs/%s/%s";
 
     private final String apiKey;
 

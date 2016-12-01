@@ -6,6 +6,7 @@ import com.endercrest.uwaterlooapi.courses.CoursesAPI;
 import com.endercrest.uwaterlooapi.events.EventsAPI;
 import com.endercrest.uwaterlooapi.feds.FedsAPI;
 import com.endercrest.uwaterlooapi.foodservices.FoodServicesAPI;
+import com.endercrest.uwaterlooapi.news.NewsAPI;
 
 /**
  * Created by Thomas Cordua-von Specht on 11/23/2016.
@@ -20,6 +21,7 @@ public class UWaterlooAPI {
     private final AwardsAPI awardsAPI;
     private final EventsAPI eventsAPI;
     private final BlogsAPI blogsAPI;
+    private final NewsAPI newsAPI;
 
     public UWaterlooAPI(String apiKey){
         coursesAPI = new CoursesAPI(apiKey);
@@ -28,6 +30,7 @@ public class UWaterlooAPI {
         awardsAPI = new AwardsAPI(apiKey);
         eventsAPI = new EventsAPI(apiKey);
         blogsAPI = new BlogsAPI(apiKey);
+        newsAPI = new NewsAPI(apiKey);
     }
 
     /**
@@ -76,5 +79,13 @@ public class UWaterlooAPI {
      */
     public BlogsAPI getBlogsAPI(){
         return blogsAPI;
+    }
+
+    /**
+     * Get the class that contains all API methods for the newsAPI.
+     * @return {@link NewsAPI}
+     */
+    public NewsAPI getNewsAPI(){
+        return newsAPI;
     }
 }

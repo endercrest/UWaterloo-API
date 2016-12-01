@@ -1,7 +1,7 @@
 package com.endercrest.uwaterlooapi.events.models;
 
+import com.endercrest.uwaterlooapi.base.models.UWImage;
 import com.google.gson.annotations.SerializedName;
-import com.sun.xml.internal.fastinfoset.stax.EventLocation;
 
 import java.util.List;
 
@@ -23,7 +23,7 @@ public class EventExtended {
     private List<String> type;
     private EventWebsite website;
     private EventHost host;
-    private EventImage image;
+    private UWImage image;
     private EventLocation location;
     @SerializedName("site_name")
     private String siteName;
@@ -131,11 +131,11 @@ public class EventExtended {
         this.host = host;
     }
 
-    public EventImage getImage() {
+    public UWImage getImage() {
         return image;
     }
 
-    public void setImage(EventImage image) {
+    public void setImage(UWImage image) {
         this.image = image;
     }
 
@@ -278,81 +278,6 @@ public class EventExtended {
 
         public void setLongitude(float longitude) {
             this.longitude = longitude;
-        }
-    }
-
-    public class EventImage{
-        private int id;
-        private String file;
-        private String alt;
-        private String mime;
-        private int size;
-        private int width;
-        private int height;
-        private String url;
-
-        public int getId() {
-            return id;
-        }
-
-        public void setId(int id) {
-            this.id = id;
-        }
-
-        public String getFile() {
-            return file;
-        }
-
-        public void setFile(String file) {
-            this.file = file;
-        }
-
-        public String getAlt() {
-            return alt;
-        }
-
-        public void setAlt(String alt) {
-            this.alt = alt;
-        }
-
-        public String getMime() {
-            return mime;
-        }
-
-        public void setMime(String mime) {
-            this.mime = mime;
-        }
-
-        public int getSize() {
-            return size;
-        }
-
-        public void setSize(int size) {
-            this.size = size;
-        }
-
-        public int getWidth() {
-            return width;
-        }
-
-        public void setWidth(int width) {
-            this.width = width;
-        }
-
-        public int getHeight() {
-            return height;
-        }
-
-        public void setHeight(int height) {
-            this.height = height;
-        }
-
-        public String getUrl() {
-            return url;
-        }
-
-        public void setUrl(String url) {
-            this.url = url;
         }
     }
 
