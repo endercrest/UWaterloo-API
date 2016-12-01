@@ -8,6 +8,7 @@ import com.endercrest.uwaterlooapi.feds.FedsAPI;
 import com.endercrest.uwaterlooapi.foodservices.FoodServicesAPI;
 import com.endercrest.uwaterlooapi.news.NewsAPI;
 import com.endercrest.uwaterlooapi.opportunities.OpportunitiesAPI;
+import com.endercrest.uwaterlooapi.services.ServicesAPI;
 
 /**
  * Created by Thomas Cordua-von Specht on 11/23/2016.
@@ -24,6 +25,7 @@ public class UWaterlooAPI {
     private final BlogsAPI blogsAPI;
     private final NewsAPI newsAPI;
     private final OpportunitiesAPI opportunitiesAPI;
+    private final ServicesAPI servicesAPI;
 
     public UWaterlooAPI(String apiKey){
         coursesAPI = new CoursesAPI(apiKey);
@@ -34,6 +36,7 @@ public class UWaterlooAPI {
         blogsAPI = new BlogsAPI(apiKey);
         newsAPI = new NewsAPI(apiKey);
         opportunitiesAPI = new OpportunitiesAPI(apiKey);
+        servicesAPI = new ServicesAPI(apiKey);
     }
 
     /**
@@ -106,5 +109,14 @@ public class UWaterlooAPI {
      */
     public OpportunitiesAPI getOpportunitiesAPI(){
         return opportunitiesAPI;
+    }
+
+    /**
+     * Get the class that contains all API methods for the servicesAPI.
+     * @see <a href="https://github.com/uWaterloo/api-documentation/tree/master/v2/services">Waterloo Services Docs!</a>
+     * @return {@link ServicesAPI}
+     */
+    public ServicesAPI getServicesAPI(){
+        return servicesAPI;
     }
 }
