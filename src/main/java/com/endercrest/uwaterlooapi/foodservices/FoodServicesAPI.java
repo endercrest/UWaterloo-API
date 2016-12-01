@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by Thomas Cordua-von Specht on 11/25/2016.
  */
-public class FoodServices {
+public class FoodServicesAPI {
 
     private final String apiKey;
 
@@ -25,7 +25,7 @@ public class FoodServices {
     private static final String NOTES_DATE_ENDPOINT = "foodservices/%s/%s/notes";
     private static final String ANNOUNCEMENT_DATE_ENDPOINT = "foodservices/%s/%s/announcements";
 
-    public FoodServices(String apiKey){
+    public FoodServicesAPI(String apiKey){
         this.apiKey = apiKey;
     }
 

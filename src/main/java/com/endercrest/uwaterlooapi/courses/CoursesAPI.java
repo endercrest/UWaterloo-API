@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by Thomas Cordua-von Specht on 11/23/2016.
  */
-public class Courses {
+public class CoursesAPI {
 
     private static final String COURSE_LIST_ENDPOINT = "courses";
     private static final String COURSE_SUBJECT_ENDPOINT = "courses/%s";
@@ -22,7 +22,7 @@ public class Courses {
 
     private final String apiKey;
 
-    public Courses(String apiKey) {
+    public CoursesAPI(String apiKey) {
         this.apiKey = apiKey;
     }
 

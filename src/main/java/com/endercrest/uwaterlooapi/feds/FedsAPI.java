@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Created by Thomas Cordua-von Specht on 11/25/2016.
  */
-public class Feds {
+public class FedsAPI {
 
     private final String apiKey;
 
@@ -19,7 +19,7 @@ public class Feds {
     private static final String FEDS_EVENT_ENDPOINT= "feds/events/%s";
     private static final String FEDS_LOCATIONS_ENDPOINT = "feds/locations";
 
-    public Feds(String apiKey){
+    public FedsAPI(String apiKey){
         this.apiKey = apiKey;
     }
 

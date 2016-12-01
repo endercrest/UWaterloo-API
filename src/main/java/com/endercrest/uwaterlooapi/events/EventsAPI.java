@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by Thomas Cordua-von Specht on 12/1/2016.
  */
-public class Events {
+public class EventsAPI {
 
     private static final String EVENTS_ENDPOINT = "events";
     private static final String EVENTS_SITE_ENDPOINT = "events/%s";
@@ -21,7 +21,7 @@ public class Events {
 
     private final String apiKey;
 
-    public Events(String apiKey){
+    public EventsAPI(String apiKey){
         this.apiKey = apiKey;
     }
 

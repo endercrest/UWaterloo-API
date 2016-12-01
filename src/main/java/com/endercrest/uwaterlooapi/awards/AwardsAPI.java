@@ -10,14 +10,14 @@ import java.util.List;
 /**
  * Created by Thomas Cordua-von Specht on 12/1/2016.
  */
-public class Awards {
+public class AwardsAPI {
 
     private static final String GRADUATE_AWARD_ENDPOINT = "awards/graduate";
     private static final String UNDERGRADUATE_AWARD_ENDPOINT = "awards/undergraduate";
 
     private final String apiKey;
 
-    public Awards(String apiKey){
+    public AwardsAPI(String apiKey){
         this.apiKey = apiKey;
     }
 
