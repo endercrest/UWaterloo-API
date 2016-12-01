@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class FoodServices {
 
-    private final String api;
+    private final String apiKey;
 
     private static final String MENU_ENDPOINT = "foodservices/menu";
     private static final String NOTES_ENDPOINT = "foodservices/notes";
@@ -25,8 +25,8 @@ public class FoodServices {
     private static final String NOTES_DATE_ENDPOINT = "foodservices/%s/%s/notes";
     private static final String ANNOUNCEMENT_DATE_ENDPOINT = "foodservices/%s/%s/announcements";
 
-    public FoodServices(String api){
-        this.api = api;
+    public FoodServices(String apiKey){
+        this.apiKey = apiKey;
     }
 
     /**
@@ -34,7 +34,7 @@ public class FoodServices {
      * @return {@link FoodServiceMenu}
      */
     public ApiRequest<FoodServiceMenu> getAllMenus(){
-        return ApiRequest.createApiRequest(MENU_ENDPOINT, api,
+        return ApiRequest.createApiRequest(MENU_ENDPOINT, apiKey,
                 new TypeToken<ApiRequest<FoodServiceMenu>>(){}.getType());
     }
 
@@ -43,7 +43,7 @@ public class FoodServices {
      * @return {@link FoodServiceNote}
      */
     public ApiRequest<List<FoodServiceNote>> getAllNotes(){
-        return ApiRequest.createApiRequest(NOTES_ENDPOINT, api,
+        return ApiRequest.createApiRequest(NOTES_ENDPOINT, apiKey,
                 new TypeToken<ApiRequest<List<FoodServiceNote>>>(){}.getType());
     }
 
@@ -52,7 +52,7 @@ public class FoodServices {
      * @return {@link FoodServiceDiet}
      */
     public ApiRequest<List<FoodServiceDiet>> getAllDiets(){
-        return ApiRequest.createApiRequest(DIETS_ENDPOINT, api,
+        return ApiRequest.createApiRequest(DIETS_ENDPOINT, apiKey,
                 new TypeToken<ApiRequest<List<FoodServiceDiet>>>(){}.getType());
     }
 
@@ -61,7 +61,7 @@ public class FoodServices {
      * @return {@link FoodServiceOutlet}
      */
     public ApiRequest<List<FoodServiceOutlet>> getAllOutlets(){
-        return ApiRequest.createApiRequest(OUTLETS_ENDPOINT, api,
+        return ApiRequest.createApiRequest(OUTLETS_ENDPOINT, apiKey,
                 new TypeToken<ApiRequest<List<FoodServiceOutlet>>>(){}.getType());
     }
 
@@ -70,7 +70,7 @@ public class FoodServices {
      * @return {@link FoodServiceLocation}
      */
     public ApiRequest<List<FoodServiceLocation>> getAllLocations(){
-        return ApiRequest.createApiRequest(LOCATIONS_ENDPOINT, api,
+        return ApiRequest.createApiRequest(LOCATIONS_ENDPOINT, apiKey,
                 new TypeToken<ApiRequest<List<FoodServiceLocation>>>(){}.getType());
     }
 
@@ -80,7 +80,7 @@ public class FoodServices {
      * @return {@link FoodServiceWatcardVendor}
      */
     public ApiRequest<List<FoodServiceWatcardVendor>> getAllWatcardVendor(){
-        return ApiRequest.createApiRequest(WATCARD_ENDPOINT, api,
+        return ApiRequest.createApiRequest(WATCARD_ENDPOINT, apiKey,
                 new TypeToken<ApiRequest<List<FoodServiceWatcardVendor>>>(){}.getType());
     }
 
@@ -90,7 +90,7 @@ public class FoodServices {
      * @return {@link FoodServiceAnnouncement}
      */
     public ApiRequest<List<FoodServiceAnnouncement>> getAllAnnouncements(){
-        return ApiRequest.createApiRequest(ANNOUNCEMENT_ENDPOINT, api,
+        return ApiRequest.createApiRequest(ANNOUNCEMENT_ENDPOINT, apiKey,
                 new TypeToken<ApiRequest<List<FoodServiceAnnouncement>>>(){}.getType());
     }
 
@@ -100,7 +100,7 @@ public class FoodServices {
      * @return {@link FoodServiceProduct}
      */
     public ApiRequest<FoodServiceProduct> getProductDetails(String productId){
-        return ApiRequest.createApiRequest(String.format(PRODUCT_ENDPOINT, productId), api,
+        return ApiRequest.createApiRequest(String.format(PRODUCT_ENDPOINT, productId), apiKey,
                 new TypeToken<ApiRequest<FoodServiceProduct>>(){}.getType());
     }
 
@@ -111,7 +111,7 @@ public class FoodServices {
      * @return {@link FoodServiceMenu}
      */
     public ApiRequest<FoodServiceMenu> getAllMenus(String year, String week){
-        return ApiRequest.createApiRequest(String.format(MENU_DATE_ENDPOINT, year, week), api,
+        return ApiRequest.createApiRequest(String.format(MENU_DATE_ENDPOINT, year, week), apiKey,
                 new TypeToken<ApiRequest<FoodServiceMenu>>(){}.getType());
     }
 
@@ -122,7 +122,7 @@ public class FoodServices {
      * @return {@link FoodServiceNote}
      */
     public ApiRequest<List<FoodServiceNote>> getAllNotes(String year, String week){
-        return ApiRequest.createApiRequest(String.format(NOTES_DATE_ENDPOINT, year, week), api,
+        return ApiRequest.createApiRequest(String.format(NOTES_DATE_ENDPOINT, year, week), apiKey,
                 new TypeToken<ApiRequest<List<FoodServiceNote>>>(){}.getType());
     }
 
@@ -133,7 +133,7 @@ public class FoodServices {
      * @return {@link FoodServiceNote}
      */
     public ApiRequest<List<FoodServiceAnnouncement>> getAllAnnouncements(String year, String week){
-        return ApiRequest.createApiRequest(String.format(ANNOUNCEMENT_DATE_ENDPOINT, year, week), api,
+        return ApiRequest.createApiRequest(String.format(ANNOUNCEMENT_DATE_ENDPOINT, year, week), apiKey,
                 new TypeToken<ApiRequest<List<FoodServiceAnnouncement>>>(){}.getType());
     }
 }

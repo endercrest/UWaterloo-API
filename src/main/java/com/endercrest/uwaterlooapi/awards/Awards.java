@@ -15,10 +15,10 @@ public class Awards {
     private static final String GRADUATE_AWARD_ENDPOINT = "awards/graduate";
     private static final String UNDERGRADUATE_AWARD_ENDPOINT = "awards/undergraduate";
 
-    private final String api;
+    private final String apiKey;
 
-    public Awards(String api){
-        this.api = api;
+    public Awards(String apiKey){
+        this.apiKey = apiKey;
     }
 
     /**
@@ -26,7 +26,7 @@ public class Awards {
      * @return {@link AwardGraduate}
      */
     public ApiRequest<List<AwardGraduate>> getAllGraduateAwards(){
-        return ApiRequest.createApiRequest(GRADUATE_AWARD_ENDPOINT, api,
+        return ApiRequest.createApiRequest(GRADUATE_AWARD_ENDPOINT, apiKey,
                 new TypeToken<ApiRequest<List<AwardGraduate>>>(){}.getType());
     }
 
@@ -35,7 +35,7 @@ public class Awards {
      * @return {@link AwardUndergraduate}
      */
     public ApiRequest<List<AwardUndergraduate>> getAllUndergraduateAwards(){
-        return ApiRequest.createApiRequest(GRADUATE_AWARD_ENDPOINT, api,
+        return ApiRequest.createApiRequest(GRADUATE_AWARD_ENDPOINT, apiKey,
                 new TypeToken<ApiRequest<List<AwardUndergraduate>>>(){}.getType());
     }
 

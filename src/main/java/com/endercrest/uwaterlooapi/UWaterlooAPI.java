@@ -19,12 +19,12 @@ public class UWaterlooAPI {
     private final Awards awards;
     private final Events events;
 
-    public UWaterlooAPI(String api){
-        courses = new Courses(api);
-        feds = new Feds(api);
-        foodServices = new FoodServices(api);
-        awards = new Awards(api);
-        events = new Events(api);
+    public UWaterlooAPI(String apiKey){
+        courses = new Courses(apiKey);
+        feds = new Feds(apiKey);
+        foodServices = new FoodServices(apiKey);
+        awards = new Awards(apiKey);
+        events = new Events(apiKey);
     }
 
     /**

@@ -13,14 +13,14 @@ import java.util.List;
  */
 public class Feds {
 
-    private final String api;
+    private final String apiKey;
 
     private static final String FEDS_EVENTS_ENDPOINT = "feds/events";
     private static final String FEDS_EVENT_ENDPOINT= "feds/events/%s";
     private static final String FEDS_LOCATIONS_ENDPOINT = "feds/locations";
 
-    public Feds(String api){
-        this.api = api;
+    public Feds(String apiKey){
+        this.apiKey = apiKey;
     }
 
     /**
@@ -28,7 +28,7 @@ public class Feds {
      * @return A list of all FedEvents.
      */
     public ApiRequest<List<FedEvent>> getAllUpcomingEvents(){
-        return ApiRequest.createApiRequest(FEDS_EVENTS_ENDPOINT, api,
+        return ApiRequest.createApiRequest(FEDS_EVENTS_ENDPOINT, apiKey,
                 new TypeToken<ApiRequest<List<FedEvent>>>(){}.getType());
     }
 
@@ -39,7 +39,7 @@ public class Feds {
      *         description.
      */
     public ApiRequest<FedEventExtended> getUpcomingEvent(String id){
-        return ApiRequest.createApiRequest(String.format(FEDS_EVENT_ENDPOINT, id), api,
+        return ApiRequest.createApiRequest(String.format(FEDS_EVENT_ENDPOINT, id), apiKey,
                 new TypeToken<ApiRequest<FedEventExtended>>(){}.getType());
     }
 
@@ -48,7 +48,7 @@ public class Feds {
      * @return List of FedLocations
      */
     public ApiRequest<List<FedLocation>> getAllLocations(){
-        return ApiRequest.createApiRequest(FEDS_LOCATIONS_ENDPOINT, api,
+        return ApiRequest.createApiRequest(FEDS_LOCATIONS_ENDPOINT, apiKey,
                 new TypeToken<ApiRequest<List<FedLocation>>>(){}.getType());
     }
 }
