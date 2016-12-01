@@ -2,6 +2,7 @@ package com.endercrest.uwaterlooapi;
 
 import com.endercrest.uwaterlooapi.courses.Courses;
 import com.endercrest.uwaterlooapi.feds.Feds;
+import com.endercrest.uwaterlooapi.foodservices.FoodServices;
 
 /**
  * Created by Thomas Cordua-von Specht on 11/23/2016.
@@ -12,10 +13,12 @@ public class UWaterlooAPI {
 
     private final Courses courses;
     private final Feds feds;
+    private final FoodServices foodServices;
 
     public UWaterlooAPI(String api){
         courses = new Courses(api);
         feds = new Feds(api);
+        foodServices = new FoodServices(api);
     }
 
     /**
@@ -32,5 +35,13 @@ public class UWaterlooAPI {
      */
     public Feds getFeds(){
         return feds;
+    }
+
+    /**
+     * Get the class that contains all API methods for the Food Services
+     * @return {@link FoodServices}
+     */
+    public FoodServices getFoodServices(){
+        return foodServices;
     }
 }
