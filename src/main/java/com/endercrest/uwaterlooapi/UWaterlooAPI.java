@@ -9,6 +9,7 @@ import com.endercrest.uwaterlooapi.foodservices.FoodServicesAPI;
 import com.endercrest.uwaterlooapi.news.NewsAPI;
 import com.endercrest.uwaterlooapi.opportunities.OpportunitiesAPI;
 import com.endercrest.uwaterlooapi.services.ServicesAPI;
+import com.endercrest.uwaterlooapi.weather.WeatherAPI;
 
 /**
  * Created by Thomas Cordua-von Specht on 11/23/2016.
@@ -26,6 +27,7 @@ public class UWaterlooAPI {
     private final NewsAPI newsAPI;
     private final OpportunitiesAPI opportunitiesAPI;
     private final ServicesAPI servicesAPI;
+    private final WeatherAPI weatherAPI;
 
     public UWaterlooAPI(String apiKey){
         coursesAPI = new CoursesAPI(apiKey);
@@ -37,6 +39,7 @@ public class UWaterlooAPI {
         newsAPI = new NewsAPI(apiKey);
         opportunitiesAPI = new OpportunitiesAPI(apiKey);
         servicesAPI = new ServicesAPI(apiKey);
+        weatherAPI = new WeatherAPI(apiKey);
     }
 
     /**
@@ -118,5 +121,14 @@ public class UWaterlooAPI {
      */
     public ServicesAPI getServicesAPI(){
         return servicesAPI;
+    }
+
+    /**
+     * Get the class that contains all API methods for the weatherAPI.
+     * @see <a href="https://github.com/uWaterloo/api-documentation/tree/master/v2/weather">Waterloo Weather Docs!</a>
+     * @return {@link WeatherAPI}
+     */
+    public WeatherAPI getWeatherAPI(){
+        return weatherAPI;
     }
 }
