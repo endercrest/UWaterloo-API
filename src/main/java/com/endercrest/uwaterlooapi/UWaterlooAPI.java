@@ -9,6 +9,7 @@ import com.endercrest.uwaterlooapi.foodservices.FoodServicesAPI;
 import com.endercrest.uwaterlooapi.news.NewsAPI;
 import com.endercrest.uwaterlooapi.opportunities.OpportunitiesAPI;
 import com.endercrest.uwaterlooapi.services.ServicesAPI;
+import com.endercrest.uwaterlooapi.terms.TermsAPI;
 import com.endercrest.uwaterlooapi.weather.WeatherAPI;
 
 /**
@@ -28,6 +29,7 @@ public class UWaterlooAPI {
     private final OpportunitiesAPI opportunitiesAPI;
     private final ServicesAPI servicesAPI;
     private final WeatherAPI weatherAPI;
+    private final TermsAPI termsAPI;
 
     public UWaterlooAPI(String apiKey){
         coursesAPI = new CoursesAPI(apiKey);
@@ -40,6 +42,7 @@ public class UWaterlooAPI {
         opportunitiesAPI = new OpportunitiesAPI(apiKey);
         servicesAPI = new ServicesAPI(apiKey);
         weatherAPI = new WeatherAPI(apiKey);
+        termsAPI = new TermsAPI(apiKey);
     }
 
     /**
@@ -130,5 +133,14 @@ public class UWaterlooAPI {
      */
     public WeatherAPI getWeatherAPI(){
         return weatherAPI;
+    }
+
+    /**
+     * Get the class that contains all API methods for the termsAPI
+     * @see <a href="https://github.com/uWaterloo/api-documentation/tree/master/v2/terms">Waterloo Terms Docs!</a>
+     * @return {@link TermsAPI}
+     */
+    public TermsAPI getTermsAPI(){
+        return termsAPI;
     }
 }
