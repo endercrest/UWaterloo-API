@@ -2,6 +2,7 @@ package com.endercrest.uwaterlooapi;
 
 import com.endercrest.uwaterlooapi.awards.AwardsAPI;
 import com.endercrest.uwaterlooapi.blogs.BlogsAPI;
+import com.endercrest.uwaterlooapi.codes.CodesAPI;
 import com.endercrest.uwaterlooapi.courses.CoursesAPI;
 import com.endercrest.uwaterlooapi.events.EventsAPI;
 import com.endercrest.uwaterlooapi.feds.FedsAPI;
@@ -32,6 +33,7 @@ public class UWaterlooAPI {
     private final WeatherAPI weatherAPI;
     private final TermsAPI termsAPI;
     private final ResourcesAPI resourcesAPI;
+    private final CodesAPI codesAPI;
 
     public UWaterlooAPI(String apiKey){
         coursesAPI = new CoursesAPI(apiKey);
@@ -46,6 +48,7 @@ public class UWaterlooAPI {
         weatherAPI = new WeatherAPI(apiKey);
         termsAPI = new TermsAPI(apiKey);
         resourcesAPI = new ResourcesAPI(apiKey);
+        codesAPI = new CodesAPI(apiKey);
     }
 
     /**
@@ -150,9 +153,18 @@ public class UWaterlooAPI {
     /**
      * Get the class that contains all API methods for the resourceAPI
      * @see <a href="https://github.com/uWaterloo/api-documentation/tree/master/v2/resources">Waterloo Resources Docs!</a>
-     * @return
+     * @return {@link ResourcesAPI}
      */
     public ResourcesAPI getResourcesAPI(){
         return resourcesAPI;
+    }
+
+    /**
+     * Get the class that contains all API methods for the codesAPO.
+     * @see <a href="https://github.com/uWaterloo/api-documentation/tree/master/v2/codes">Waterloo Codes Docs!</a>
+     * @return {@link CodesAPI}
+     */
+    public CodesAPI getCodesAPI(){
+        return codesAPI;
     }
 }
