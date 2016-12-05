@@ -8,6 +8,7 @@ import com.endercrest.uwaterlooapi.feds.FedsAPI;
 import com.endercrest.uwaterlooapi.foodservices.FoodServicesAPI;
 import com.endercrest.uwaterlooapi.news.NewsAPI;
 import com.endercrest.uwaterlooapi.opportunities.OpportunitiesAPI;
+import com.endercrest.uwaterlooapi.resources.ResourcesAPI;
 import com.endercrest.uwaterlooapi.services.ServicesAPI;
 import com.endercrest.uwaterlooapi.terms.TermsAPI;
 import com.endercrest.uwaterlooapi.weather.WeatherAPI;
@@ -30,6 +31,7 @@ public class UWaterlooAPI {
     private final ServicesAPI servicesAPI;
     private final WeatherAPI weatherAPI;
     private final TermsAPI termsAPI;
+    private final ResourcesAPI resourcesAPI;
 
     public UWaterlooAPI(String apiKey){
         coursesAPI = new CoursesAPI(apiKey);
@@ -43,6 +45,7 @@ public class UWaterlooAPI {
         servicesAPI = new ServicesAPI(apiKey);
         weatherAPI = new WeatherAPI(apiKey);
         termsAPI = new TermsAPI(apiKey);
+        resourcesAPI = new ResourcesAPI(apiKey);
     }
 
     /**
@@ -142,5 +145,14 @@ public class UWaterlooAPI {
      */
     public TermsAPI getTermsAPI(){
         return termsAPI;
+    }
+
+    /**
+     * Get the class that contains all API methods for the resourceAPI
+     * @see <a href="https://github.com/uWaterloo/api-documentation/tree/master/v2/resources">Waterloo Resources Docs!</a>
+     * @return
+     */
+    public ResourcesAPI getResourcesAPI(){
+        return resourcesAPI;
     }
 }

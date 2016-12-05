@@ -34,7 +34,7 @@ public class TermsAPI {
      * TODO Implement with custom deserializer
      * https://github.com/google/gson/blob/master/UserGuide.md#TOC-Custom-Serialization-and-Deserialization
      */
-    public ApiRequest<TermList> getTermList(){
+    public ApiRequest<TermList> getList(){
         throw new NotImplementedException();
     }
 
@@ -43,7 +43,7 @@ public class TermsAPI {
      * @param termId The Term id, ie "1161"
      * @return {@link TermCourse}
      */
-    public ApiRequest<List<TermCourse>> getTermCourses(String termId){
+    public ApiRequest<List<TermCourse>> getCourses(String termId){
         return ApiRequest.createApiRequest(String.format(TERM_COURSES_ENDPOINT, termId), apiKey,
                 new TypeToken<ApiRequest<List<TermCourse>>>(){}.getType());
     }
@@ -53,7 +53,7 @@ public class TermsAPI {
      * @param termId The term id, ie "1161"
      * @return {@link TermExamSchedule}
      */
-    public ApiRequest<List<TermExamSchedule>> getTermExamSchedule(String termId){
+    public ApiRequest<List<TermExamSchedule>> getExamSchedule(String termId){
         return ApiRequest.createApiRequest(String.format(TERM_EXAMSCHEDULE_ENDPOINT, termId), apiKey,
                 new TypeToken<ApiRequest<List<TermExamSchedule>>>(){}.getType());
     }
@@ -64,7 +64,7 @@ public class TermsAPI {
      * @param subject The subject, ie "MATH"
      * @return  {@link TermCourseSchedule}
      */
-    public ApiRequest<List<TermCourseSchedule>> getTermCourseSchedules(String termId, String subject){
+    public ApiRequest<List<TermCourseSchedule>> getCourseSchedules(String termId, String subject){
         return ApiRequest.createApiRequest(String.format(TERM_SUBJECT_SCHEDULE, termId, subject), apiKey,
                 new TypeToken<ApiRequest<List<TermCourseSchedule>>>(){}.getType());
     }
@@ -76,7 +76,7 @@ public class TermsAPI {
      * @param catalogNumber The catalog number, ie "136"
      * @return  {@link TermCourseSchedule}
      */
-    public ApiRequest<List<TermCourseSchedule>> getTermCouresSchedules(String termId, String subject, String catalogNumber){
+    public ApiRequest<List<TermCourseSchedule>> getCouresSchedules(String termId, String subject, String catalogNumber){
         return ApiRequest.createApiRequest(String.format(TERM_SUBJECT_CATALOG_SCHEDULE, termId, subject, catalogNumber), apiKey,
                 new TypeToken<ApiRequest<List<TermCourseSchedule>>>(){}.getType());
     }
@@ -86,7 +86,7 @@ public class TermsAPI {
      * @param term The term id, ie "1161"
      * @return {@link TermCourseEnrollment}
      */
-    public ApiRequest<List<TermCourseEnrollment>> getTermEnrollment(String term){
+    public ApiRequest<List<TermCourseEnrollment>> getEnrollment(String term){
         return ApiRequest.createApiRequest(String.format(TERM_ENROLLMENT_SCHEDULE, term), apiKey,
                 new TypeToken<ApiRequest<List<TermCourseEnrollment>>>(){}.getType());
     }
@@ -96,7 +96,7 @@ public class TermsAPI {
      * @param term The term id, ie "1161"
      * @return {@link TermCourseEnrollment}
      */
-    public ApiRequest<List<TermCourseEnrollment>> getTermEnrollment(String term, String subject){
+    public ApiRequest<List<TermCourseEnrollment>> getEnrollment(String term, String subject){
         return ApiRequest.createApiRequest(String.format(TERM_SUBJECT_ENROLLMENT_SCHEDULE, term, subject), apiKey,
                 new TypeToken<ApiRequest<List<TermCourseEnrollment>>>(){}.getType());
     }
@@ -106,7 +106,7 @@ public class TermsAPI {
      * @param term The term id, ie "1161"
      * @return {@link TermInfoSession}
      */
-    public ApiRequest<List<TermInfoSession>> getTermInfoSessions(String term){
+    public ApiRequest<List<TermInfoSession>> getInfoSessions(String term){
         return ApiRequest.createApiRequest(String.format(TERM_INFOSESSIONS_SCHEDULE, term), apiKey,
                 new TypeToken<ApiRequest<List<TermInfoSession>>>(){}.getType());
     }
