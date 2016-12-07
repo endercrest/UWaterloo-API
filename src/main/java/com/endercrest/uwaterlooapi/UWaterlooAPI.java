@@ -15,6 +15,7 @@ import com.endercrest.uwaterlooapi.poi.PointOfInterestAPI;
 import com.endercrest.uwaterlooapi.resources.ResourcesAPI;
 import com.endercrest.uwaterlooapi.services.ServicesAPI;
 import com.endercrest.uwaterlooapi.terms.TermsAPI;
+import com.endercrest.uwaterlooapi.transit.TransitAPI;
 import com.endercrest.uwaterlooapi.weather.WeatherAPI;
 
 /**
@@ -40,6 +41,7 @@ public class UWaterlooAPI {
     private final BuildingsAPI buildingsAPI;
     private final PointOfInterestAPI pointOfInterestAPI;
     private final ParkingAPI parkingAPI;
+    private final TransitAPI transitAPI;
 
     public UWaterlooAPI(String apiKey){
         coursesAPI = new CoursesAPI(apiKey);
@@ -58,6 +60,7 @@ public class UWaterlooAPI {
         buildingsAPI = new BuildingsAPI(apiKey);
         pointOfInterestAPI = new PointOfInterestAPI(apiKey);
         parkingAPI = new ParkingAPI(apiKey);
+        transitAPI = new TransitAPI(apiKey);
     }
 
     /**
@@ -202,5 +205,14 @@ public class UWaterlooAPI {
      */
     public ParkingAPI getParkingAPI(){
         return parkingAPI;
+    }
+
+    /**
+     * Get the class that contains all API methods for the transitAPI.
+     * @see <a href="https://github.com/uWaterloo/api-documentation/tree/master/v2/transit">Waterloo Transit Docs!</a>
+     * @return {@link TransitAPI}
+     */
+    public TransitAPI getTransitAPI(){
+        return transitAPI;
     }
 }
