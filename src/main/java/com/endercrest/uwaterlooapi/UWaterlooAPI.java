@@ -1,5 +1,6 @@
 package com.endercrest.uwaterlooapi;
 
+import com.endercrest.uwaterlooapi.api.ApiAPI;
 import com.endercrest.uwaterlooapi.awards.AwardsAPI;
 import com.endercrest.uwaterlooapi.blogs.BlogsAPI;
 import com.endercrest.uwaterlooapi.buildings.BuildingsAPI;
@@ -44,6 +45,7 @@ public class UWaterlooAPI {
     private final ParkingAPI parkingAPI;
     private final TransitAPI transitAPI;
     private final DirectoryAPI directoryAPI;
+    private final ApiAPI apiAPI;
 
     public UWaterlooAPI(String apiKey){
         coursesAPI = new CoursesAPI(apiKey);
@@ -64,6 +66,7 @@ public class UWaterlooAPI {
         parkingAPI = new ParkingAPI(apiKey);
         transitAPI = new TransitAPI(apiKey);
         directoryAPI = new DirectoryAPI(apiKey);
+        apiAPI = new ApiAPI(apiKey);
     }
 
     /**
@@ -226,5 +229,14 @@ public class UWaterlooAPI {
      */
     public DirectoryAPI getDirectoryAPI(){
         return directoryAPI;
+    }
+
+    /**
+     * Get the class that contains all API methods for the apiAPI.
+     * @see <a href="https://github.com/uWaterloo/api-documentation/tree/master/v2/api">Waterloo API Docs!</a>
+     * @return {@link ApiAPI}
+     */
+    public ApiAPI getApiAPI(){
+        return apiAPI;
     }
 }
