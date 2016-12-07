@@ -15,6 +15,7 @@ import com.endercrest.uwaterlooapi.opportunities.OpportunitiesAPI;
 import com.endercrest.uwaterlooapi.parking.ParkingAPI;
 import com.endercrest.uwaterlooapi.poi.PointOfInterestAPI;
 import com.endercrest.uwaterlooapi.resources.ResourcesAPI;
+import com.endercrest.uwaterlooapi.server.ServerAPI;
 import com.endercrest.uwaterlooapi.services.ServicesAPI;
 import com.endercrest.uwaterlooapi.terms.TermsAPI;
 import com.endercrest.uwaterlooapi.transit.TransitAPI;
@@ -46,6 +47,7 @@ public class UWaterlooAPI {
     private final TransitAPI transitAPI;
     private final DirectoryAPI directoryAPI;
     private final ApiAPI apiAPI;
+    private final ServerAPI serverAPI;
 
     public UWaterlooAPI(String apiKey){
         coursesAPI = new CoursesAPI(apiKey);
@@ -67,6 +69,7 @@ public class UWaterlooAPI {
         transitAPI = new TransitAPI(apiKey);
         directoryAPI = new DirectoryAPI(apiKey);
         apiAPI = new ApiAPI(apiKey);
+        serverAPI = new ServerAPI(apiKey);
     }
 
     /**
@@ -238,5 +241,14 @@ public class UWaterlooAPI {
      */
     public ApiAPI getApiAPI(){
         return apiAPI;
+    }
+
+    /**
+     * Get the class that contains all API methods for the serverAPI.
+     * @see <a href="https://github.com/uWaterloo/api-documentation/tree/master/v2/server">Waterloo Server Docs!</a>
+     * @return {@link ServerAPI}
+     */
+    public ServerAPI getServerAPI(){
+        return serverAPI;
     }
 }
