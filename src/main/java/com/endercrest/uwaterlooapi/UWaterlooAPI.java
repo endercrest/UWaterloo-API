@@ -10,6 +10,7 @@ import com.endercrest.uwaterlooapi.feds.FedsAPI;
 import com.endercrest.uwaterlooapi.foodservices.FoodServicesAPI;
 import com.endercrest.uwaterlooapi.news.NewsAPI;
 import com.endercrest.uwaterlooapi.opportunities.OpportunitiesAPI;
+import com.endercrest.uwaterlooapi.parking.ParkingAPI;
 import com.endercrest.uwaterlooapi.poi.PointOfInterestAPI;
 import com.endercrest.uwaterlooapi.resources.ResourcesAPI;
 import com.endercrest.uwaterlooapi.services.ServicesAPI;
@@ -38,6 +39,7 @@ public class UWaterlooAPI {
     private final CodesAPI codesAPI;
     private final BuildingsAPI buildingsAPI;
     private final PointOfInterestAPI pointOfInterestAPI;
+    private final ParkingAPI parkingAPI;
 
     public UWaterlooAPI(String apiKey){
         coursesAPI = new CoursesAPI(apiKey);
@@ -55,6 +57,7 @@ public class UWaterlooAPI {
         codesAPI = new CodesAPI(apiKey);
         buildingsAPI = new BuildingsAPI(apiKey);
         pointOfInterestAPI = new PointOfInterestAPI(apiKey);
+        parkingAPI = new ParkingAPI(apiKey);
     }
 
     /**
@@ -190,5 +193,14 @@ public class UWaterlooAPI {
      */
     public PointOfInterestAPI getPointOfInterestAPI(){
         return pointOfInterestAPI;
+    }
+
+    /**
+     * Get the class that contains all API methods for the parkingAPI.
+     * @see <a href="https://github.com/uWaterloo/api-documentation/tree/master/v2/parking">Waterloo Parking Docs!</a>
+     * @return {@link ParkingAPI}
+     */
+    public ParkingAPI getParkingAPI(){
+        return parkingAPI;
     }
 }
