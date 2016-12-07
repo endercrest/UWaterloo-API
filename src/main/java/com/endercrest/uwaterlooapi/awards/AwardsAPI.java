@@ -1,6 +1,6 @@
 package com.endercrest.uwaterlooapi.awards;
 
-import com.endercrest.uwaterlooapi.api.ApiRequest;
+import com.endercrest.uwaterlooapi.data.ApiRequest;
 import com.endercrest.uwaterlooapi.awards.models.AwardGraduate;
 import com.endercrest.uwaterlooapi.awards.models.AwardUndergraduate;
 import com.google.gson.reflect.TypeToken;

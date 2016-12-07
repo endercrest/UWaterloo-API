@@ -1,6 +1,6 @@
 package com.endercrest.uwaterlooapi.transit;
 
-import com.endercrest.uwaterlooapi.api.ApiRequest;
+import com.endercrest.uwaterlooapi.data.ApiRequest;
 import com.endercrest.uwaterlooapi.transit.models.TransitAgency;
 import com.endercrest.uwaterlooapi.transit.models.TransitStop;
 import com.google.gson.reflect.TypeToken;

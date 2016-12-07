@@ -1,6 +1,6 @@
 package com.endercrest.uwaterlooapi.feds;
 
-import com.endercrest.uwaterlooapi.api.ApiRequest;
+import com.endercrest.uwaterlooapi.data.ApiRequest;
 import com.endercrest.uwaterlooapi.feds.models.FedEvent;
 import com.endercrest.uwaterlooapi.feds.models.FedEventExtended;
 import com.endercrest.uwaterlooapi.feds.models.FedLocation;

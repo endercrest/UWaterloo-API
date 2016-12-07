@@ -1,6 +1,6 @@
 package com.endercrest.uwaterlooapi.opportunities;
 
-import com.endercrest.uwaterlooapi.api.ApiRequest;
+import com.endercrest.uwaterlooapi.data.ApiRequest;
 import com.endercrest.uwaterlooapi.opportunities.models.OpportunityBase;
 import com.endercrest.uwaterlooapi.opportunities.models.OpportunityDetails;
 import com.endercrest.uwaterlooapi.opportunities.models.OpportunitySite;

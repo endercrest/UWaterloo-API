@@ -1,6 +1,6 @@
 package com.endercrest.uwaterlooapi.directory;
 
-import com.endercrest.uwaterlooapi.api.ApiRequest;
+import com.endercrest.uwaterlooapi.data.ApiRequest;
 import com.endercrest.uwaterlooapi.directory.models.DirectoryUser;
 import com.google.gson.reflect.TypeToken;
 

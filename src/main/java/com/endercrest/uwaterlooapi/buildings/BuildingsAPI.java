@@ -1,6 +1,6 @@
 package com.endercrest.uwaterlooapi.buildings;
 
-import com.endercrest.uwaterlooapi.api.ApiRequest;
+import com.endercrest.uwaterlooapi.data.ApiRequest;
 import com.endercrest.uwaterlooapi.buildings.models.BuildingAccessPoint;
 import com.endercrest.uwaterlooapi.buildings.models.BuildingsDetail;
 import com.endercrest.uwaterlooapi.buildings.models.BuildingsRoomCourse;

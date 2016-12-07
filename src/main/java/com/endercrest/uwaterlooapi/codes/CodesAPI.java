@@ -1,6 +1,6 @@
 package com.endercrest.uwaterlooapi.codes;
 
-import com.endercrest.uwaterlooapi.api.ApiRequest;
+import com.endercrest.uwaterlooapi.data.ApiRequest;
 import com.endercrest.uwaterlooapi.codes.models.*;
 import com.google.gson.reflect.TypeToken;
 

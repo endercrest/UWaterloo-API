@@ -1,6 +1,6 @@
 package com.endercrest.uwaterlooapi.blogs;
 
-import com.endercrest.uwaterlooapi.api.ApiRequest;
+import com.endercrest.uwaterlooapi.data.ApiRequest;
 import com.endercrest.uwaterlooapi.blogs.models.BlogExtended;
 import com.endercrest.uwaterlooapi.blogs.models.BlogMinimal;
 import com.google.gson.reflect.TypeToken;

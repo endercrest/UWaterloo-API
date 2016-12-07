@@ -1,6 +1,6 @@
 package com.endercrest.uwaterlooapi.parking;
 
-import com.endercrest.uwaterlooapi.api.ApiRequest;
+import com.endercrest.uwaterlooapi.data.ApiRequest;
 import com.endercrest.uwaterlooapi.parking.models.ParkingCapacity;
 import com.endercrest.uwaterlooapi.parking.models.ParkingLot;
 import com.google.gson.reflect.TypeToken;

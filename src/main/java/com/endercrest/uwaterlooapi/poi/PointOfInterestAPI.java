@@ -1,6 +1,6 @@
 package com.endercrest.uwaterlooapi.poi;
 
-import com.endercrest.uwaterlooapi.api.ApiRequest;
+import com.endercrest.uwaterlooapi.data.ApiRequest;
 import com.endercrest.uwaterlooapi.poi.models.POIInformation;
 import com.google.gson.reflect.TypeToken;
 

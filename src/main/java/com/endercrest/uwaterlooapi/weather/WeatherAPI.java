@@ -1,6 +1,6 @@
 package com.endercrest.uwaterlooapi.weather;
 
-import com.endercrest.uwaterlooapi.api.ApiRequest;
+import com.endercrest.uwaterlooapi.data.ApiRequest;
 import com.endercrest.uwaterlooapi.weather.models.WeatherCurrent;
 import com.google.gson.reflect.TypeToken;
 

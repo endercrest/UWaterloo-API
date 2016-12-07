@@ -1,4 +1,4 @@
-package com.endercrest.uwaterlooapi.api;
+package com.endercrest.uwaterlooapi.data;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,6 +1,6 @@
 package com.endercrest.uwaterlooapi.resources;
 
-import com.endercrest.uwaterlooapi.api.ApiRequest;
+import com.endercrest.uwaterlooapi.data.ApiRequest;
 import com.endercrest.uwaterlooapi.resources.models.ResourceGooseNest;
 import com.endercrest.uwaterlooapi.resources.models.ResourceInfoSession;
 import com.endercrest.uwaterlooapi.resources.models.ResourceSalary;

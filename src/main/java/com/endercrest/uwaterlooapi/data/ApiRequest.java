@@ -1,4 +1,4 @@
-package com.endercrest.uwaterlooapi.api;
+package com.endercrest.uwaterlooapi.data;
 
 import com.google.gson.*;
 import com.google.gson.annotations.Expose;

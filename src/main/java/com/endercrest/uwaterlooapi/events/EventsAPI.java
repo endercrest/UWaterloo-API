@@ -1,6 +1,6 @@
 package com.endercrest.uwaterlooapi.events;
 
-import com.endercrest.uwaterlooapi.api.ApiRequest;
+import com.endercrest.uwaterlooapi.data.ApiRequest;
 import com.endercrest.uwaterlooapi.events.models.Event;
 import com.endercrest.uwaterlooapi.events.models.EventExtended;
 import com.endercrest.uwaterlooapi.events.models.EventHoliday;
