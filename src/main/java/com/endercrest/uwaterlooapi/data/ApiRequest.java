@@ -38,9 +38,9 @@ public class ApiRequest<T> {
     /**
      * Creates a new API Request with the requested endpoint using the apiKey, which then uses
      * the apiRequestType to construct the object correctly.
-     *
-     * Examples:
-     * createApiRequest("courses", "123456", new TypeToken<ApiRequest<List<CourseMinimal>>>() {}.getType())
+     * <br>
+     * Examples:<br>
+     * createApiRequest(&quot;courses&quot;, &quot;123456&quot;, new TypeToken&lt;ApiRequest&lt;List&lt;CourseMinimal&gt;&gt;&gt;() {}.getType())
      *
      * @param endpoint The endpoint of the university v2 api.
      * @param apiKey Your apiKey given by the university of waterloo.
@@ -55,9 +55,9 @@ public class ApiRequest<T> {
     /**
      * Creates a new API Request with the requested endpoint using the apiKey, which then uses
      * the apiRequestType to construct the object correctly with parameters.
-     *
-     * Examples:
-     * createApiRequest("courses", "123456", new TypeToken<ApiRequest<List<CourseMinimal>>>() {}.getType())
+     * <br>
+     * Examples:<br>
+     * createApiRequest(&quot;courses&quot;, &quot;123456&quot;, &quot;term=123&quot;, new TypeToken&lt;ApiRequest&lt;List&lt;CourseMinimal&gt;&gt;&gt;() {}.getType())
      *
      * @param endpoint The endpoint of the university v2 api.
      * @param apiKey Your apiKey given by the university of waterloo.
