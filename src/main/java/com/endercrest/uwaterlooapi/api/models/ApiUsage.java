@@ -11,9 +11,9 @@ public class ApiUsage {
     @SerializedName("api_key")
     private String apiKey;
     @SerializedName("monthly_calls")
-    private String monthlyCalls;
+    private int monthlyCalls;
     @SerializedName("total_calls")
-    private String totalCalls;
+    private int totalCalls;
 
     public String getName() {
         return name;
@@ -31,19 +31,19 @@ public class ApiUsage {
         this.apiKey = apiKey;
     }
 
-    public String getMonthlyCalls() {
+    public int getMonthlyCalls() {
         return monthlyCalls;
     }
 
-    public void setMonthlyCalls(String monthlyCalls) {
+    public void setMonthlyCalls(int monthlyCalls) {
         this.monthlyCalls = monthlyCalls;
     }
 
-    public String getTotalCalls() {
+    public int getTotalCalls() {
         return totalCalls;
     }
 
-    public void setTotalCalls(String totalCalls) {
+    public void setTotalCalls(int totalCalls) {
         this.totalCalls = totalCalls;
     }
 }
