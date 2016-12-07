@@ -10,6 +10,7 @@ import com.endercrest.uwaterlooapi.feds.FedsAPI;
 import com.endercrest.uwaterlooapi.foodservices.FoodServicesAPI;
 import com.endercrest.uwaterlooapi.news.NewsAPI;
 import com.endercrest.uwaterlooapi.opportunities.OpportunitiesAPI;
+import com.endercrest.uwaterlooapi.poi.PointOfInterestAPI;
 import com.endercrest.uwaterlooapi.resources.ResourcesAPI;
 import com.endercrest.uwaterlooapi.services.ServicesAPI;
 import com.endercrest.uwaterlooapi.terms.TermsAPI;
@@ -36,6 +37,7 @@ public class UWaterlooAPI {
     private final ResourcesAPI resourcesAPI;
     private final CodesAPI codesAPI;
     private final BuildingsAPI buildingsAPI;
+    private final PointOfInterestAPI pointOfInterestAPI;
 
     public UWaterlooAPI(String apiKey){
         coursesAPI = new CoursesAPI(apiKey);
@@ -52,6 +54,7 @@ public class UWaterlooAPI {
         resourcesAPI = new ResourcesAPI(apiKey);
         codesAPI = new CodesAPI(apiKey);
         buildingsAPI = new BuildingsAPI(apiKey);
+        pointOfInterestAPI = new PointOfInterestAPI(apiKey);
     }
 
     /**
@@ -178,5 +181,14 @@ public class UWaterlooAPI {
      */
     public BuildingsAPI getBuildingsAPI(){
         return buildingsAPI;
+    }
+
+    /**
+     * Get the class that contains all API methods for the buildingsAPI.
+     * @see <a href="https://github.com/uWaterloo/api-documentation/tree/master/v2/poi">Waterloo Point of Interest Docs!</a>
+     * @return {@link PointOfInterestAPI}
+     */
+    public PointOfInterestAPI getPointOfInterestAPI(){
+        return pointOfInterestAPI;
     }
 }
