@@ -2,6 +2,7 @@ package com.endercrest.uwaterlooapi;
 
 import com.endercrest.uwaterlooapi.awards.AwardsAPI;
 import com.endercrest.uwaterlooapi.blogs.BlogsAPI;
+import com.endercrest.uwaterlooapi.buildings.BuildingsAPI;
 import com.endercrest.uwaterlooapi.codes.CodesAPI;
 import com.endercrest.uwaterlooapi.courses.CoursesAPI;
 import com.endercrest.uwaterlooapi.events.EventsAPI;
@@ -34,6 +35,7 @@ public class UWaterlooAPI {
     private final TermsAPI termsAPI;
     private final ResourcesAPI resourcesAPI;
     private final CodesAPI codesAPI;
+    private final BuildingsAPI buildingsAPI;
 
     public UWaterlooAPI(String apiKey){
         coursesAPI = new CoursesAPI(apiKey);
@@ -49,6 +51,7 @@ public class UWaterlooAPI {
         termsAPI = new TermsAPI(apiKey);
         resourcesAPI = new ResourcesAPI(apiKey);
         codesAPI = new CodesAPI(apiKey);
+        buildingsAPI = new BuildingsAPI(apiKey);
     }
 
     /**
@@ -166,5 +169,14 @@ public class UWaterlooAPI {
      */
     public CodesAPI getCodesAPI(){
         return codesAPI;
+    }
+
+    /**
+     * Get the class that contains all API methods for the buildingsAPI.
+     * @see <a href="https://github.com/uWaterloo/api-documentation/tree/master/v2/buildings">Waterloo Buildings Docs!</a>
+     * @return {@link CodesAPI}
+     */
+    public BuildingsAPI getBuildingsAPI(){
+        return buildingsAPI;
     }
 }
