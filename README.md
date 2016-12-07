@@ -11,7 +11,15 @@ worry about parsing the information.
 ## Installation & Usage
 
 #### Installation
-Details for installation to be included soon.
+To get started quickly, add the following to your maven pom to add UWaterlooAPI to your project, which is downloaded
+through Maven Central
+```xml
+<dependency>
+    <groupId>com.endercrest.uwaterlooapi</groupId>
+    <artifactId>UWaterlooAPI</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
 
 #### Usage
 To get started with this library begin by initializing UWaterlooAPI class which contains all API classes.
