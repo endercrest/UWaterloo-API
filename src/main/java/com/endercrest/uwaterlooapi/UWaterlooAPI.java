@@ -5,6 +5,7 @@ import com.endercrest.uwaterlooapi.blogs.BlogsAPI;
 import com.endercrest.uwaterlooapi.buildings.BuildingsAPI;
 import com.endercrest.uwaterlooapi.codes.CodesAPI;
 import com.endercrest.uwaterlooapi.courses.CoursesAPI;
+import com.endercrest.uwaterlooapi.directory.DirectoryAPI;
 import com.endercrest.uwaterlooapi.events.EventsAPI;
 import com.endercrest.uwaterlooapi.feds.FedsAPI;
 import com.endercrest.uwaterlooapi.foodservices.FoodServicesAPI;
@@ -42,6 +43,7 @@ public class UWaterlooAPI {
     private final PointOfInterestAPI pointOfInterestAPI;
     private final ParkingAPI parkingAPI;
     private final TransitAPI transitAPI;
+    private final DirectoryAPI directoryAPI;
 
     public UWaterlooAPI(String apiKey){
         coursesAPI = new CoursesAPI(apiKey);
@@ -61,6 +63,7 @@ public class UWaterlooAPI {
         pointOfInterestAPI = new PointOfInterestAPI(apiKey);
         parkingAPI = new ParkingAPI(apiKey);
         transitAPI = new TransitAPI(apiKey);
+        directoryAPI = new DirectoryAPI(apiKey);
     }
 
     /**
@@ -214,5 +217,14 @@ public class UWaterlooAPI {
      */
     public TransitAPI getTransitAPI(){
         return transitAPI;
+    }
+
+    /**
+     * Get the class that contains all API methods for the directoryAPI.
+     * @see <a href="https://github.com/uWaterloo/api-documentation/tree/master/v2/directory">Waterloo Directory Docs!</a>
+     * @return {@link DirectoryAPI}
+     */
+    public DirectoryAPI getDirectoryAPI(){
+        return directoryAPI;
     }
 }
