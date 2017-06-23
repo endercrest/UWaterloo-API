@@ -15,11 +15,11 @@ public class TermsAPI {
     private static final String TERM_LIST_ENDPOINT = "terms/list";
     private static final String TERM_COURSES_ENDPOINT = "terms/%s/courses";
     private static final String TERM_EXAMSCHEDULE_ENDPOINT = "terms/%s/examschedule";
-    private static final String TERM_SUBJECT_SCHEDULE = "term/%s/%s/schedule";
-    private static final String TERM_SUBJECT_CATALOG_SCHEDULE = "term/%s/%s/%s/schedule";
-    private static final String TERM_ENROLLMENT_SCHEDULE = "term/%s/enrollment";
-    private static final String TERM_SUBJECT_ENROLLMENT_SCHEDULE = "term/%s/%s/enrollment";
-    private static final String TERM_INFOSESSIONS_SCHEDULE = "term/%s/infosessions";
+    private static final String TERM_SUBJECT_SCHEDULE = "terms/%s/%s/schedule";
+    private static final String TERM_SUBJECT_CATALOG_SCHEDULE = "terms/%s/%s/%s/schedule";
+    private static final String TERM_ENROLLMENT_SCHEDULE = "terms/%s/enrollment";
+    private static final String TERM_SUBJECT_ENROLLMENT_SCHEDULE = "terms/%s/%s/enrollment";
+    private static final String TERM_INFOSESSIONS_SCHEDULE = "terms/%s/infosessions";
 
     private final String apiKey;
 
