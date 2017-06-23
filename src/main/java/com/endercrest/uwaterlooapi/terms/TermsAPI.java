@@ -1,9 +1,9 @@
 package com.endercrest.uwaterlooapi.terms;
 
 import com.endercrest.uwaterlooapi.data.ApiRequest;
+import com.endercrest.uwaterlooapi.exceptions.NotImplementedException;
 import com.endercrest.uwaterlooapi.terms.models.*;
 import com.google.gson.reflect.TypeToken;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.List;
 
@@ -29,10 +29,14 @@ public class TermsAPI {
 
     /**
      * Get the last years, current year, and next years list of terms.
-     * @return Will throw {@link NotImplementedException}.
      *
+     * <p>
      * TODO Implement with custom deserializer
      * https://github.com/google/gson/blob/master/UserGuide.md#TOC-Custom-Serialization-and-Deserialization
+     * </p>
+     * @return Will throw {@link NotImplementedException}.
+     *
+     * @throws NotImplementedException This function is currently not ready for production use.
      */
     public ApiRequest<TermList> getList(){
         throw new NotImplementedException();
